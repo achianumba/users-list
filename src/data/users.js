@@ -1,4 +1,4 @@
-const users = [
+let users = [
   {
     name: 'Lelah Nichols',
     city: 'Troy',
@@ -37,5 +37,13 @@ const users = [
     tags: ['vintage', 'electric'],
   },
 ];
+
+// calls replace method twice incase there's a middle name/initial
+for (let i in users) {
+  users[i].avatar = `/images/${users[i].name
+    .replace(' ', '-')
+    .replace(' ', '-')
+    .toLowerCase()}.png`;
+}
 
 export default users;
