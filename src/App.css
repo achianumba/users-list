@@ -1,0 +1,91 @@
+.page__header {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 0.75em;
+  row-gap: 1.5em;
+  margin-bottom: 40px; /* 70px */
+}
+
+.page__heading {
+  flex-shrink: 1 0 calc(100% - 44px);
+  max-width: calc(100% - 44px);
+  font-family: var(--font-family-heading);
+  font-weight: 900;
+  color: var(--dark);
+  font-size: clamp(1.5em, 6vmin, var(--text-5));
+}
+
+.page__menu__icon {
+  flex: 0 0 32px;
+  max-width: 32px;
+  cursor: pointer;
+}
+
+.page__nav__and__search {
+  flex: 1 0 100%;
+  max-width: 100%;
+}
+
+.page__search__form {
+  flex: 1 0 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  border: var(--border);
+  border-radius: 0.25em;
+  padding: 1em;
+  gap: 8px;
+}
+
+.page__search__icon {
+  flex: 0 0 32px;
+  max-width: 32px;
+}
+
+.page__search__input {
+  flex: 1 1 calc(100% - 40px);
+  max-width: calc(100% - 40px);
+  padding: 0.25em 0.25em 0.25em 0;
+  border: none;
+  font-family: var(--font-family-body);
+  font-size: (--text-3);
+  color: var(--dark);
+}
+
+.page__nav__wrapper {
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-1);
+  display: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: clamp(2em, 5vmin, 6.25em);
+  z-index: +10;
+}
+
+div.page__nav__wrapper.page__nav__toggle {
+  display: flex;
+}
+
+.page__nav {
+  flex: 1 0 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em; /* 0 */
+}
+
+.page__nav__close-icon {
+  flex: 0 0 32px;
+  max-width: 32px;
+  align-self: baseline;
+  cursor: pointer;
+}

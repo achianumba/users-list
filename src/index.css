@@ -43,37 +43,52 @@
 }
 
 :root {
-  --font-family-heading: Merriweather, serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-  --font-family-body: Poppins, sans-serif, font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  --font-family-heading: Merriweather, serif, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue';
+  --font-family-body: Poppins, sans-serif, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue';
   --font-weight-500: 500;
   --font-weight-900: 900;
-  --text-1: .75px;
-  --text-2: .875rem;
+  --text-1: 0.75rem;
+  --text-2: 0.875rem;
   --text-3: 1rem;
-  --text-4: 1.125px;
+  --text-4: 1.125rem;
   --text-5: 2rem;
-  --dark: #151B32;
-  --light-1: #E6EAF8;
-  --light-2: #FBFCFF;
-  --white: #FFFFFF;
-  --blue-1: #516FD4;
-  --blue-2: #849FFF;
-  --blue-3: #BCC6E7;
-  --blue-4: #BFC8E5;
-  --blue-5: #BFC8E6;
-  --border: 1px solid #BFC8E6;;
+  --dark: #151b32;
+  --light-1: #e6eaf8;
+  --light-2: #fbfcff;
+  --white: #ffffff;
+  --blue-1: #516fd4;
+  --blue-2: #849fff;
+  --blue-3: #bcc6e7;
+  --blue-4: #bfc8e5;
+  --blue-5: #bfc8e6;
+  --border: 1px solid #bfc8e6;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: clamp(1em, 5vmin, 3em);
+  background-color: var(--light-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.root,
+.root * {
+  outline: 1px solid red;
 }
 
 .root {
@@ -81,14 +96,13 @@ body {
   max-width: 100%;
   background-color: var(--white);
   border-radius: 1em;
-  padding: 1em;
+  padding: clamp(1em, 5vmin, 6.25em);
 }
 
 @media screen and (min-width: 1213px) {
   .root {
     flex: 1 1 1213px;
     max-width: 1213px;
-    gap: 70px;
     padding: 6.25em;
   }
 }

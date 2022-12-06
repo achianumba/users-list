@@ -1,0 +1,15 @@
+.page__nav__link {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: right;
+  padding: 1em;
+  font-size: (--text-3);
+  font-family: var(--font-family-body);
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.page__nav__link.active {
+  background-color: var(--blue-2);
+  color: var(--white);
+}
