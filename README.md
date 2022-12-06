@@ -1,6 +1,6 @@
 # Users list
 
-Users list is my responsive build of the [Users list](https://www.uidesigndaily.com/posts/figma-users-list-card-day-1542) UI design by [Ildiko Gaspar](https://www.uidesigndaily.com/about). Checkout the live version [here](vercel).
+Users list is my responsive build of the [Users list](https://www.uidesigndaily.com/posts/figma-users-list-card-day-1542) UI design by [Ildiko Gaspar](https://www.uidesigndaily.com/about). Checkout the live version [here](https://users-list-plum.vercel.app/).
 
 ![users list](public/social-card.png)
 
