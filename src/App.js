@@ -21,12 +21,16 @@ function App() {
       (user) => !!searchQuery && user.name.includes(searchQuery)
     );
 
-    console.log(match);
+    //
+    console.log({ searchQuery });
   };
 
   const toggleNavbar = () => {
     navbarRef.current?.classList.toggle('page__nav__toggle');
-    console.log(navbarRef.current?.classList);
+
+    navbarRef.current?.parentElement?.parentElement?.parentElement?.parentElement.classList.toggle(
+      'remove-scroll-capability'
+    );
   };
 
   return (
@@ -76,9 +80,15 @@ function App() {
       </header>
 
       <main className="site__main users">
-        {users.map((user, i) => (
-          <User user={user} key={i} />
-        ))}
+        {searchQuery
+          ? users
+              .filter(
+                (user) =>
+                  !!searchQuery &&
+                  new RegExp(`${searchQuery}`, 'ig').test(user.name)
+              )
+              .map((user, i) => <User user={user} key={i} />)
+          : users.map((user, i) => <User user={user} key={i} />)}
       </main>
     </BrowserRouter>
   );

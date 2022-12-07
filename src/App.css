@@ -65,7 +65,7 @@
   display: none;
   flex-wrap: wrap;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   padding: clamp(2em, 5vmin, 6.25em);
   z-index: +10;
 }
@@ -74,18 +74,26 @@ div.page__nav__wrapper.page__nav__toggle {
   display: flex;
 }
 
+.page__nav__close-icon {
+  flex: 0 0 32px;
+  max-width: 32px;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
 .page__nav {
   flex: 1 0 100%;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  align-content: flex-start;
   gap: 0.5em; /* 0 */
 }
 
-.page__nav__close-icon {
-  flex: 0 0 32px;
-  max-width: 32px;
-  align-self: baseline;
-  cursor: pointer;
+.users {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  gap: 1em;
 }

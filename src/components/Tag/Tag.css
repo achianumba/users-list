@@ -1,2 +1,17 @@
 .user__tag {
+  display: inline-block;
+  font-size: var(--text-1);
+  font-family: var(--font-family-body);
+  color: var(--blue-1);
+  text-decoration: none;
+  border: var(--border);
+  border-radius: 6.25em;
+  padding: 0.125em 0.5em;
+  background-color: var(--white);
+}
+
+.user__tag:hover,
+.user__tag:active {
+  background-color: var(--blue-1);
+  color: var(--white);
 }

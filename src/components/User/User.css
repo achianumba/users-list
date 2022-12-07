@@ -1,3 +1,49 @@
-.user:hover {
+.user {
+  background-color: var(--light-2);
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  border-radius: 1em;
+}
+
+.user__avatar {
+  flex: 1 1 97px;
+  max-width: 97px;
+}
+
+.user__info {
+  flex: 1 1 calc(100% - 113px);
+  max-width: calc(100% - 113px); /* 166px */
+}
+
+.user__name {
+  margin-bottom: 4px;
+  font-family: var(--font-family-heading);
+  color: var(--dark);
+  font-size: var(--text-4);
+}
+
+.user__location {
+  margin-bottom: 16px;
+  font-family: var(--font-family-body);
+  font-size: var(--text-2);
+  color: var(--dark);
+}
+
+.user__tags {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.25em;
+}
+
+.user .user:hover {
   box-shadow: 0px 8px 23px rgba(218, 224, 249, 0.7);
+}
+
+@media screen and (min-width: 800px) {
+  .user {
+    /*padding: 1.5em;*/
+  }
 }

@@ -4,7 +4,7 @@ import './Tag.css';
 const Tag = ({ content, className }) => {
   return (
     <Link
-      to={`/user/tags/${content}`}
+      to={`/user/tags?=${content}`}
       className={className ? `${className} user__tag` : 'user__tag'}
     >
       {content}
