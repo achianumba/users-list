@@ -67,7 +67,7 @@ function App() {
 
             <nav className="page__nav">
               <NavItem to="/users/reputation">Reputation</NavItem>
-              <NavItem to="/users/new">New users</NavItem>
+              <NavItem to="/">New users</NavItem>
               <NavItem to="/users/voters">Voters</NavItem>
               <NavItem to="/users/editors">Editors</NavItem>
               <NavItem to="/users/moderators">Moderators</NavItem>
