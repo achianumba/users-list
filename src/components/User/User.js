@@ -1,5 +1,6 @@
 import './User.css';
 import Tag from '../Tag/Tag';
+import { Link } from 'react-router-dom';
 
 const User = ({ user, className }) => {
   return (
@@ -7,7 +8,9 @@ const User = ({ user, className }) => {
       <img src={user.avatar} alt={user.name} className="user__avatar" />
 
       <div className="user__info">
-        <p className="user__name">{user.name}</p>
+        <Link to={`/user/${user.name}`} className="user__name">
+          {user.name}
+        </Link>
         <p className="user__location">
           {user.city}, {user.state}
         </p>

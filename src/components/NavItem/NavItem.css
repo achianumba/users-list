@@ -12,4 +12,14 @@
 .page__nav__link.active {
   background-color: var(--blue-2);
   color: var(--white);
+  border-radius: 0.5em;
+}
+
+@media screen and (min-width: 784px) {
+  .page__nav__link {
+    flex: 0 0 min-content;
+    max-width: min-content;
+    white-space: nowrap;
+    background-color: var(--white);
+  }
 }

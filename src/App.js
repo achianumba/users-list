@@ -17,13 +17,9 @@ function App() {
 
   const searchForUser = (e) => {
     setSearchQuery(e.target.value);
-    const match = users.filter(
-      (user) => !!searchQuery && user.name.includes(searchQuery)
-    );
-
-    //
-    console.log({ searchQuery });
   };
+
+  const handleSearch = (e) => {};
 
   const toggleNavbar = () => {
     navbarRef.current?.classList.toggle('page__nav__toggle');
@@ -49,6 +45,7 @@ function App() {
               src={searchIcon}
               alt="search"
               className="page__search__icon"
+              onClick={handleSearch}
             />
 
             <input

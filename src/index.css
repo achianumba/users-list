@@ -90,11 +90,6 @@ body.remove-scroll-capability {
   overflow-y: hidden;
 }
 
-.root,
-.root * {
-  outline: 1px solid red;
-}
-
 .root {
   flex: 1 1 100%;
   max-width: 100%;

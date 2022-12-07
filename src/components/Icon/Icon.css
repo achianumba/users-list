@@ -1,4 +1,5 @@
 .icon {
   display: inline-block;
   max-width: 32px;
+  cursor: pointer;
 }

@@ -20,7 +20,6 @@
 .page__menu__icon {
   flex: 0 0 32px;
   max-width: 32px;
-  cursor: pointer;
 }
 
 .page__nav__and__search {
@@ -78,7 +77,6 @@ div.page__nav__wrapper.page__nav__toggle {
   flex: 0 0 32px;
   max-width: 32px;
   align-self: flex-start;
-  cursor: pointer;
 }
 
 .page__nav {
@@ -88,12 +86,60 @@ div.page__nav__wrapper.page__nav__toggle {
   flex-wrap: wrap;
   align-items: center;
   align-content: flex-start;
-  gap: 0.5em; /* 0 */
+  gap: 0.5em;
 }
 
 .users {
   display: grid;
-  justify-content: space-between;
-  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 327px));
   gap: 1em;
+}
+
+@media screen and (min-width: 990px) {
+  .page__header {
+    display: block;
+  }
+
+  .page__heading {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  img.page__menu__icon {
+    display: none;
+  }
+
+  .page__nav__and__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .page__search__form {
+    flex: 1 1 327px;
+    max-width: 327px;
+  }
+
+  .page__nav__wrapper {
+    flex: 1 1 533px;
+    max-width: 533px;
+    display: block;
+    position: static;
+    padding: 0;
+    background-color: var(--white);
+  }
+
+  img.icon.page__nav__close-icon {
+    display: none;
+  }
+
+  .page__nav {
+    max-width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 0;
+    padding: 0;
+  }
 }
