@@ -1,0 +1,6 @@
+{
+	"name": "users-list",
+	"dockerFile": "../Dockerfile",
+	"postCreateCommand": "npm install",
+	"postStartCommand": "npm start"
+}
